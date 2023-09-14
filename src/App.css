@@ -37,3 +37,9 @@
         transform: rotate(360deg);
     }
 }
+
+#redRec {
+    width: 100px;
+    height: 75px;
+    background-color: red;
+}
