@@ -42,12 +42,14 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    switch (word.toLocaleLowerCase()) {
-        case "yes":
-            return true;
-        case "no":
-            return false;
-        default:
-            return null;
+    const temp = word.toLocaleLowerCase();
+
+    if (temp === "yes") {
+        return true;
+    }
+    if (temp === "no") {
+        return false;
+    } else {
+        return null;
     }
 }
