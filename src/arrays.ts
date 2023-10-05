@@ -115,10 +115,10 @@ export function injectPositive(values: number[]): number[] {
     if (values.every((val) => val >= 0)) {
         return [...values, sum];
     }
-    const negIndex = values.findIndex((val) => val < 0);
+    const negativeIndex = values.findIndex((val) => val < 0);
     return [
-        ...values.slice(0, negIndex + 1),
+        ...values.slice(0, negativeIndex + 1),
         sum,
-        ...values.slice(negIndex + 1)
+        ...values.slice(negativeIndex + 1)
     ];
 }
